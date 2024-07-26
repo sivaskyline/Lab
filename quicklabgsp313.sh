@@ -3,7 +3,7 @@
 export PORT=8082
 
 export REGION="${ZONE%-*}"
-
+$ gcloud config set compute/region us-central1 \  gcloud config set compute/zone us-central1-c
 gcloud compute networks create nucleus-vpc --subnet-mode=auto
 
 gcloud compute instances create $INSTANCE_NAME \
@@ -22,14 +22,6 @@ gcloud container clusters create nucleus-backend \
  
 gcloud container clusters get-credentials nucleus-backend \
 --zone $ZONE
- 
- 
-kubectl create deployment hello-server \
---image=gcr.io/google-samples/hello-app:2.0
-  
-kubectl expose deployment hello-server \
---type=LoadBalancer \
---port $PORT
  
   
 cat << EOF > startup.sh
