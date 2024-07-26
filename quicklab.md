@@ -22,7 +22,7 @@ export FIREWALL_NAME=
 ###
 
 ```bash 
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Implement%20Load%20Balancing%20on%20Compute%20Engine%20Challenge%20Lab/quicklabgsp313.sh
+curl -LO raw.githubusercontent.com/siva.skyline/Lab/quicklabgsp313.sh
 sudo chmod +x quicklabgsp313.sh
 ./quicklabgsp313.sh
 ```
