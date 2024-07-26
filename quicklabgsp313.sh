@@ -1,9 +1,10 @@
 
 
+
 export PORT=8082
 
 export REGION="${ZONE%-*}"
-$ gcloud config set compute/region us-central1 \  gcloud config set compute/zone us-central1-c
+
 gcloud compute networks create nucleus-vpc --subnet-mode=auto
 
 gcloud compute instances create $INSTANCE_NAME \
